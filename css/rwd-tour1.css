@@ -1,0 +1,74 @@
+html {
+    zoom: 200%;
+}
+
+body {
+    background-color: #DCDBD9;
+    color: #2C2C2C;
+    margin: auto;
+    left: 2%;
+    right: 2%;
+    width: 50vh;
+    height: 100%;
+    font: normal 100% Cambria, Georgia, serif;
+    /* font: 100% should map to 16px in the browser (default) */
+}
+
+h1 {
+    /* target ÷ context = result --- 1.5 x 16px = 24px */
+    font-size: 1.5em; /*OR:  24px / 16px */
+    font-style: italic;
+    font-weight: normal;
+}
+
+h1 a {
+    /* em value below derived from: 11px / 24px */
+    /* font: bold 0.458333333333333em Calibri, Optima, Arial, sans-serif; */
+    /* we could set it to 11px, and feel efficient, but the 
+    pixel units are non-deterministic */
+    color: #747474;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+a {
+    font: bold 1em Calibri, Optima, Arial, sans-serif;
+    color: #747474;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+main {
+    min-height: 70%;
+}
+
+footer {
+    background-color: white;
+    /* flexbox */
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    /* set box model width/height settings to be additive: */
+    box-sizing: content-box;
+    padding: 0.5em;
+    border-style: solid;
+    border-width: 2px;
+    border-color:rgb(117, 192, 4);
+    width: 100%;
+    /* set absolute to put footer into it's own BFC: */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+img {
+    /* only need to set one dimension, the other 
+    is calculated based on actual image size: */
+    width: 500px;
+    /* this ensures that the image will 
+    re-size according to screen width: */
+    max-width: 100%;
+}

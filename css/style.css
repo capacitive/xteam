@@ -1,0 +1,151 @@
+@font-face {
+    font-family: 'copenhagen-bold';
+    src: url('fonts/Copenhagen-bold.otf');
+}
+
+@font-face {
+    font-family: 'copenhagen-light';
+    src: url('fonts/Copenhagen-light.otf');
+}
+
+@font-face {
+    font-family: 'renault';
+    src: url('fonts/RenaultLight.otf');
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: black;
+    width: 100%;
+    margin: 0;
+}
+
+nav {
+    font-family: 'copenhagen-bold';
+    font-size: 180%;
+    padding: 40px;
+    color: white;
+}
+
+main {
+    font-size: 2em;
+    font-family: 'copenhagen-light';
+    text-align: center;
+}
+
+ul {
+    text-indent: 0;
+    margin: auto;
+    left: 10px;
+    right: 10px;
+    width: 400px;
+}
+
+li > a {
+    display: block;
+    text-decoration: none;
+    padding: 0 0.5em 0 0.5em;
+    color: white;
+}
+
+li > a:visited {
+    color: white;
+}
+
+li > a:hover {
+    color:rosybrown;
+}
+
+.current {
+    color: slategray!important;
+}
+
+h1 {
+    font-size: 280%;
+    font-family: 'renault';
+    text-align: center;
+    padding: 1em 0.5em 0.3em 0.5em;
+}
+
+h1:before {
+    content: url('../images/mixingbowl.png');
+    float: left;
+}
+
+.main > div {
+    font-size: 1.5em;
+}
+.main {
+    margin: auto;
+    left: 2%;
+    right: 2%;
+    width: 80%;
+}
+.main > div {
+    padding-top: 4px;
+}
+
+#tour {
+    font-size: 1em;
+    margin-top: 1em;
+}
+#splash {
+    font-family: 'renault';
+    font-size: 12em;
+    height: 170%;
+}
+
+@media screen and (min-width: 580px) {
+    nav > ul > li {
+        list-style: none;
+        display: table-cell;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    h1:before {
+        content: "";
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .main {
+        width: 100%;
+    }
+    .main > div {
+        font-size: 1.9em;
+    }
+    
+    h1 {
+        font-size: 2.6em;
+        margin: 12px;
+        padding: 0;
+    }
+
+    #tour {
+        margin-top: 0.8em;
+    }
+
+    #splash {
+        font-family: 'renault';
+        font-size: 10em;
+        height: 40vh;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .main > div {
+        font-size: 1.2em;
+    }
+
+    h1 {
+        font-size: 1.8em
+    };
+
+    nav > ul > li {
+        list-style: none;
+    }
+}
