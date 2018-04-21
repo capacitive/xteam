@@ -16,8 +16,10 @@
 body{
     margin: 0;
     padding: 0;
+    font-family: 'copenhagen-light';
+    font-size: 1.2em;
 }
-header {
+/* header {
     background-color: black;
     width: 100%;
     margin: 0;
@@ -26,29 +28,35 @@ header {
 nav {
     font-family: 'copenhagen-bold';
     font-size: 180%;
-    padding: 40px;
+    padding: 1.2em;
     color: white;
-}
+} */
 
 main {
     font-size: 2em;
-    font-family: 'copenhagen-light';
     text-align: center;
 }
 
-ul {
-    text-indent: 0;
-    margin: auto;
+/* ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
     left: 10px;
     right: 10px;
     width: 400px;
 }
 
+nav > ul > li {
+    list-style: none;
+    display: table-cell;
+}
+
 li > a {
     display: block;
     text-decoration: none;
-    padding: 0 0.5em 0 0.5em;
+    padding: 0 0.8em 0 0.8em;
     color: white;
+    letter-spacing: 0.12em;
 }
 
 li > a:visited {
@@ -61,16 +69,21 @@ li > a:hover {
 
 .current {
     color: slategray!important;
-}
+} */
 
 h1 {
-    font-size: 280%;
+    font-size: 1.3em;
+    font-family: 'renault';
+}
+
+.main-h1 {
+    font-size: 2.5em;
     font-family: 'renault';
     text-align: center;
     padding: 1em 0.5em 0.3em 0.5em;
 }
 
-h1:before {
+.main-h1:before {
     content: url('../images/mixingbowl.png');
     float: left;
 }
@@ -98,29 +111,25 @@ h1:before {
     height: 170%;
 }
 
-@media screen and (min-width: 580px) {
-    nav > ul > li {
-        list-style: none;
-        display: table-cell;
-    }
-}
-
-@media screen and (max-width: 1500px) {
-    h1:before {
+@media screen and (max-width: 1510px) {
+    .main-h1:before {
         content: "";
     }
+    F{
+        font-size: 2.4em;
+    }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 860px) {
     .main {
         width: 100%;
     }
     .main > div {
-        font-size: 1.9em;
+        font-size: 1em;
     }
     
-    h1 {
-        font-size: 2.6em;
+    .main-h1 {
+        font-size: 2em;
         margin: 12px;
         padding: 0;
     }
@@ -138,11 +147,11 @@ h1:before {
 
 @media screen and (max-width: 580px) {
     .main > div {
-        font-size: 1.2em;
+        font-size: 0.8em;
     }
 
-    h1 {
-        font-size: 1.8em
+    .main-h1 {
+        font-size: 1.7em
     };
 
     nav > ul > li {

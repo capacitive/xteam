@@ -1,0 +1,105 @@
+<template>
+    <style>
+        :host {
+            --nav-background-color: black;
+        }
+
+        header {
+            background-color: var(--nav-background-color);
+            width: 100%;
+            margin: 0;
+        }
+
+        nav {
+            font-family: 'copenhagen-bold';
+            font-size: 180%;
+            padding: 1em;
+            color: white;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            left: 10px;
+            right: 10px;
+            width: 400px;
+        }
+
+        nav>ul>li {
+            list-style: none;
+            display: table-cell;
+        }
+
+        li>a {
+            display: block;
+            text-decoration: none;
+            padding: 0 0.8em 0 0.8em;
+            color: white;
+            letter-spacing: 0.12em;
+        }
+
+        li>a:visited {
+            color: white;
+        }
+
+        li>a:hover {
+            color: rosybrown;
+        }
+
+        .current {
+            color: slategray!important;
+        }
+    </style>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a id="home" href="index.html">home</a>
+                </li>
+                <li>
+                    <a id="examples" href="examples.html">examples</a>
+                </li>
+                <li>
+                    <a id="rwd" href="rwd.html">rwd</a>
+                </li>
+                <li>
+                    <a id="csslayout" href="layout-tutorial/index.html">layout</a>
+                </li>
+                <li>
+                    <a id="qa" href="qa.html">q&amp;a</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+</template>
+<script>
+    //change current page's menu item style:
+    //var elementId = "home";
+    //templateContent.getElementById(elementId).className.add('current');
+
+    (function (window, document, undefined) {
+
+        var docHost = document;
+        var thisDoc = (docHost._currentScript || docHost.currentScript).ownerDocument;
+
+        var template = thisDoc.querySelector('template').content;
+
+        class HeaderNav extends HTMLElement {
+            constructor() {
+                super();
+            }
+
+            connectedCallback() {
+                var shadowRoot = this.attachShadow({ mode: 'open' });
+
+                // add template clone into shadow root.
+                var clone = docHost.importNode(template, true);
+                shadowRoot.appendChild(clone);
+            }
+        }
+
+        window.customElements.define('header-nav', HeaderNav);
+
+    })(window, document);
+</script>

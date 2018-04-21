@@ -51,7 +51,7 @@ footer {
     flex-flow: column;
     align-items: center;
     /* set box model width/height settings to be additive: */
-    box-sizing: content-box;
+    box-sizing: border-box;
     padding: 0.5em;
     border-style: solid;
     border-width: 2px;
@@ -70,5 +70,5 @@ img {
     width: 500px;
     /* this ensures that the image will 
     re-size according to screen width: */
-    max-width: 100%;
+    /* max-width: 100%; */
 }
