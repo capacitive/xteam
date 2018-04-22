@@ -12,8 +12,56 @@
 </head>
 
 <body>
-    <header-nav></header-nav>
-    <!-- <header>
+    <!--<header-nav></header-nav>-->
+    <header>
+        <style>
+            header {
+                background-color: black;
+                width: 100%;
+                margin: 0;
+            }
+
+            nav {
+                font-family: 'copenhagen-bold';
+                font-size: 180%;
+                padding: 1.2em;
+                color: white;
+            }
+
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                left: 10px;
+                right: 10px;
+                width: 400px;
+            }
+
+            nav>ul>li {
+                list-style: none;
+                display: table-cell;
+            }
+
+            li>a {
+                display: block;
+                text-decoration: none;
+                padding: 0 0.8em 0 0.8em;
+                color: white;
+                letter-spacing: 0.12em;
+            }
+
+            li>a:visited {
+                color: white;
+            }
+
+            li>a:hover {
+                color: rosybrown;
+            }
+
+            .current {
+                color: slategray!important;
+            }
+        </style>
         <nav>
             <ul>
                 <li>
@@ -30,15 +78,32 @@
                 </li>
             </ul>
         </nav>
-    </header> -->
-    <main>
-        <div id="splash">RWD</div>
-        <div id="abbrev">(Responsive Web Design)</div>
-        <div id="tour">A guided <a href="rwd.html">tour</a></div>
-    </main>
+    </header>
+    <div class="home">
+            <h1 id="splash">RWD</h1>
+            <h2 id="abbrev">(Responsive Web Design)</h2>
+            <div id="tour">A guided
+                <a href="rwd.html">tour</a>
+            </div>
+    </div>
+        
     <footer>
 
     </footer>
+    <script>
+        (function () {
+            if ('registerElement' in document
+                && 'import' in document.createElement('link')
+                && 'content' in document.createElement('template')) {
+                // platform is good!
+            } else {
+                // polyfill the platform!
+                var e = document.createElement('script');
+                e.src = 'components/webcomponentsjs/webcomponents-lite.min.js';
+                document.body.appendChild(e);
+            }
+        })();
+    </script>
 </body>
 
 </html>

@@ -17,67 +17,18 @@ body{
     margin: 0;
     padding: 0;
     font-family: 'copenhagen-light';
-    font-size: 1.2em;
-}
-/* header {
-    background-color: black;
-    width: 100%;
-    margin: 0;
-}
-
-nav {
-    font-family: 'copenhagen-bold';
-    font-size: 180%;
-    padding: 1.2em;
-    color: white;
-} */
-
-main {
-    font-size: 2em;
+    font-size: 16px;
     text-align: center;
 }
 
-/* ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    left: 10px;
-    right: 10px;
-    width: 400px;
-}
-
-nav > ul > li {
-    list-style: none;
-    display: table-cell;
-}
-
-li > a {
-    display: block;
-    text-decoration: none;
-    padding: 0 0.8em 0 0.8em;
-    color: white;
-    letter-spacing: 0.12em;
-}
-
-li > a:visited {
-    color: white;
-}
-
-li > a:hover {
-    color:rosybrown;
-}
-
-.current {
-    color: slategray!important;
-} */
-
 h1 {
-    font-size: 1.3em;
+    font-size: 24px;
     font-family: 'renault';
+    margin: 1em 0 0.2em 0;
 }
 
 .main-h1 {
-    font-size: 2.5em;
+    font-size: 1.5em;
     font-family: 'renault';
     text-align: center;
     padding: 1em 0.5em 0.3em 0.5em;
@@ -90,6 +41,7 @@ h1 {
 
 .main > div {
     font-size: 1.5em;
+    padding-top: 4px;
 }
 .main {
     margin: auto;
@@ -97,26 +49,15 @@ h1 {
     right: 2%;
     width: 80%;
 }
-.main > div {
-    padding-top: 4px;
-}
 
 #tour {
     font-size: 1em;
     margin-top: 1em;
 }
-#splash {
-    font-family: 'renault';
-    font-size: 12em;
-    height: 170%;
-}
 
 @media screen and (max-width: 1510px) {
     .main-h1:before {
         content: "";
-    }
-    F{
-        font-size: 2.4em;
     }
 }
 
@@ -129,32 +70,7 @@ h1 {
     }
     
     .main-h1 {
-        font-size: 2em;
         margin: 12px;
         padding: 0;
-    }
-
-    #tour {
-        margin-top: 0.8em;
-    }
-
-    #splash {
-        font-family: 'renault';
-        font-size: 10em;
-        height: 40vh;
-    }
-}
-
-@media screen and (max-width: 580px) {
-    .main > div {
-        font-size: 0.8em;
-    }
-
-    .main-h1 {
-        font-size: 1.7em
-    };
-
-    nav > ul > li {
-        list-style: none;
     }
 }
