@@ -1,5 +1,5 @@
 html {
-    zoom: 200%;
+    zoom: 100%;
 }
 
 body {
@@ -15,15 +15,17 @@ body {
 }
 
 h1 {
-    /* target ÷ context = result --- 1.5 x 16px = 24px */
-    font-size: 1.5em; /*OR:  24px / 16px */
+    /* target ÷ context = result
+    1.75 x 16px = 28px */
+    font-size: 1.75em; /*OR:  28px ÷ 16px */
     font-style: italic;
-    font-weight: normal;
+    font-weight: bold;
+    margin-left: 1em;
 }
 
 h1 a {
-    /* em value below derived from: 11px / 24px */
-    /* font: bold 0.458333333333333em Calibri, Optima, Arial, sans-serif; */
+    /* em value below derived from: 11px / 28px */
+    font: bold 0.464285714em Calibri, Optima, Arial, sans-serif;
     /* we could set it to 11px, and feel efficient, but the 
     pixel units are non-deterministic */
     color: #747474;
@@ -42,6 +44,15 @@ a {
 
 main {
     min-height: 70%;
+}
+
+img {
+  /* only need to set one dimension, the other 
+  is calculated based on actual image size: */
+  width: 500px;
+  /* this ensures that the image will 
+  re-size according to screen width: */
+  max-width: 100%;
 }
 
 footer {
@@ -64,11 +75,12 @@ footer {
     overflow: hidden;
 }
 
-img {
-    /* only need to set one dimension, the other 
-    is calculated based on actual image size: */
-    width: 500px;
-    /* this ensures that the image will 
-    re-size according to screen width: */
-    /* max-width: 100%; */
+.bodymarkup {
+  font-weight: bold;
+  font-size: 1.3em;
+  margin-top:12px;
+}
+
+h1 + .bodymarkup {
+  margin-bottom:12px;
 }

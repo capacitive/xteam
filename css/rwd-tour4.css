@@ -24,7 +24,7 @@ What we did to style fonts responsively using EMs, we can do with layout!
 }
 
 html {
-    zoom: 150%;
+    zoom: 100%;
 }
 
 body {
@@ -42,15 +42,15 @@ body {
 .page {
     margin: 5px auto;
     /* let's try responsive - percentages? */
-    width: 960px; 
-    /* width: 90%; */
+    /* width: 960px;  */
+    width: 90%;
 }
 
 .blog {
     margin: 0 auto 53px;
     /* 900 / 960 = 0.9375 */
-    width: 900px;
-    /* width: 93.75%; */
+    /* width: 900px; */
+    width: 93.75%;
 
     font-family: 'copenhagen-bold';
     color: white;
@@ -60,8 +60,8 @@ body {
 .blog .main {
     float: left;
     /* 566 / 900 =  .628888889*/
-    width: 566px;
-    /* width: 62.8888889%; */
+    /* width: 566px; */
+    width: 62.8888889%;
     box-sizing: border-box;
     padding: 5px;
     margin-top: 20px;
@@ -71,8 +71,8 @@ body {
 .blog .other {
     float: right;
     /* 331 / 900 = .367777778*/
-    width: 331px;
-    /* width: 36.7777778%; */
+    /* width: 331px; */
+    width: 36.7777778%;
     box-sizing: border-box;
     padding: 5px;
     margin-top: 20px;
@@ -85,7 +85,6 @@ body {
     background-color: rgb(163, 162, 162);
     padding: 20px;
     text-align: center;
-    height: 150px;
 }
 .heading {
     background-color: firebrick;
@@ -106,8 +105,7 @@ body {
 #quote {
     margin-top: 10px;
     padding: 10px 5px 5px 5px;
-    width: 300px;
-    float: right;
+    width: 200px;
     min-height: 50px;
     background-color: rgba(0, 0, 0, 0.664);
 }
@@ -174,8 +172,8 @@ img {
     width: 300px;
 }
 
-@media screen and (max-size: 800px) {
+@media screen and (max-size: 860px) {
     html {
-        zoom: 80%;
+        zoom: 100%;
     }
 }

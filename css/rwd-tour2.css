@@ -1,9 +1,10 @@
 /* 
 Arent' we supposed to be talking about grids?  
-And here I am going on abd on about typography
+And here I am going on and on about typography
 and MATH! Alright, let's crack on!
 
-What we did to style fonts responsively using EMs, we can do with layout!
+What we did to style fonts responsively using EMs, 
+we can do with layout!
 */
 
 /* layout scheme: */
@@ -24,7 +25,7 @@ What we did to style fonts responsively using EMs, we can do with layout!
 }
 
 html {
-    zoom: 150%;
+    zoom: 140%;
 }
 
 body {
@@ -34,11 +35,13 @@ body {
     left: 2%;
     right: 2%;
     width: 100%;
-    font: normal 100% Cambria, Georgia, serif;
-    /* font: 100% should map to 16px in the browser (default) */
+    /* font: 100% should map to the 
+       16px browser default: */
+    font: normal 100% Cambria, Georgia, serif; 
 }
 
-/* START this layout will need to switch from fixed pixel widths to responsive percentages */
+/* START - This layout will need to switch from 
+fixed pixel widths to responsive percentages: */
 .page {
     margin: 5px auto;
     /* let's try responsive - percentages? */
@@ -60,7 +63,6 @@ body {
 .blog .section {
     padding: 0.5em;
     margin: 0;
-    height: 200px;
 }
 
 .blog .main {
@@ -77,7 +79,6 @@ body {
     background-color: rgb(163, 162, 162);
     padding: 20px;
     text-align: center;
-    height: 150px;
 }
 #intro {
     margin-top: 10px;
@@ -89,10 +90,16 @@ body {
     margin-top: 10px;
     padding: 10px 5px 5px 5px;
     width: 300px;
-    float: right;
+    /* float: right; */
+    position: relative;
+    right: -200px;
     min-height: 50px;
     background-color: rgba(0, 0, 0, 0.664);
 }
+#quote::after {
+  clear:both;
+}
+
 #entry {
     margin-top: 15px;
 }
@@ -105,7 +112,8 @@ body {
     /* margin-left: 5px; */
     background-color: rgba(0, 0, 0, 0.664);
 }
-/* END this layout will need to switch from fixed pixel widths to responsive percentages */
+/* END - This layout will need to switch from fixed 
+   pixel widths to responsive percentages */
 
 h1 {
     /* target ÷ context = result --- 1.5 x 16px = 24px */
@@ -155,18 +163,20 @@ footer {
     border-color: rgb(117, 192, 4);
     width: 100%;
     /* set absolute to put footer into it's own BFC: */
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: 0;
-    overflow: hidden;
 }
 
 img {
     width: 300px;
 }
 
-@media screen and (max-size: 800px) {
+@media screen and (max-width: 800px) {
     html {
         zoom: 80%;
+    }
+    footer {
+      display: none;
     }
 }

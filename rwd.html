@@ -7,71 +7,10 @@
     <title>rwd</title>
     <meta name="description" content="Responsive Web Design ingredients">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
-<style>
-    header {
-        background-color: black;
-        width: 100%;
-        margin: 0;
-    }
-
-    nav {
-        font-family: 'copenhagen-bold';
-        font-size: 180%;
-        padding: 1.2em;
-        color: white;
-    }
-
-    ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        left: 10px;
-        right: 10px;
-        width: 400px;
-    }
-
-    nav>ul>li {
-        list-style: none;
-        display: table-cell;
-    }
-
-    li>a {
-        display: block;
-        text-decoration: none;
-        padding: 0 0.8em 0 0.8em;
-        color: white;
-        letter-spacing: 0.12em;
-    }
-
-    li>a:visited {
-        color: white;
-    }
-
-    li>a:hover {
-        color: rosybrown;
-    }
-
-    .current {
-        color: slategray!important;
-    }
-
-    @media screen and (max-width: 720px) {
-        ul {
-            margin: auto;
-            padding: 0;
-            left: 10px;
-            right: 10px;
-        }
-    
-        nav>ul>li {
-            list-style: none;
-            display: block;
-        }
-    }
-</style>
 
 <body>
     <header>
@@ -94,10 +33,11 @@
     </header>
     <main>
         <div class="main">
-            <h1 class="main-h1">3 main ingredients</h1>
-            <div>1. A flexible, grid-based layout</div>
-            <div>2. Flexible images and media</div>
-            <div>3. Media queries</div>
+            <h1 class="rwd-h1">3 Main Ingredients</h1>
+            <div id="rwd-h1-image"></div>
+            <h2>1. A flexible, grid-based layout</h2>
+            <h2>2. Flexible images and media</h2>
+            <h2>3. Media queries</h2>
             <div id="tour">
                 <a href="rwd-tour1.html">Let's get cooking!</a>
             </div>

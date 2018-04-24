@@ -1,0 +1,58 @@
+header {
+  background-color: black;
+  width: 100%;
+  margin: 0;
+}
+
+nav {
+  font-family: 'copenhagen-bold';
+  font-size: 180%;
+  padding: 1.2em;
+  color: white;
+  margin: 0;
+  
+}
+
+nav>ul {
+  list-style-type: none;
+  width: 100%;
+}
+
+nav>ul>li {
+  list-style: none;
+  display: inline;
+}
+
+li>a {
+  display: inline;
+  text-decoration: none;
+  padding: 0 0.8em 0 0.8em;
+  color: white;
+  letter-spacing: 0.12em;
+}
+
+li>a:visited {
+  color: white;
+}
+
+li>a:hover {
+  color: rosybrown;
+}
+
+.current {
+  color: slategray!important;
+}
+
+@media screen and (max-width: 720px) {
+  ul {
+      margin: auto;
+      padding: 0;
+      left: 10px;
+      right: 10px;
+  }
+
+  nav>ul>li {
+      list-style: none;
+      display: block;
+  }
+}

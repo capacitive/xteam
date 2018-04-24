@@ -1,76 +1,193 @@
 @font-face {
-    font-family: 'copenhagen-bold';
-    src: url('fonts/Copenhagen-bold.otf');
+  font-family: 'copenhagen-bold';
+  src: url('fonts/Copenhagen-bold.otf');
 }
 
 @font-face {
-    font-family: 'copenhagen-light';
-    src: url('fonts/Copenhagen-light.otf');
+  font-family: 'copenhagen-light';
+  src: url('fonts/Copenhagen-light.otf');
 }
 
 @font-face {
-    font-family: 'renault';
-    src: url('fonts/RenaultLight.otf');
+  font-family: 'renault';
+  src: url('fonts/RenaultLight.otf');
 }
 
-body{
-    margin: 0;
-    padding: 0;
-    font-family: 'copenhagen-light';
-    font-size: 16px;
-    text-align: center;
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'copenhagen-light';
+  /* 16px: */
+  font-size: 100%;
+  text-align: center;
 }
 
 h1 {
-    font-size: 24px;
-    font-family: 'renault';
-    margin: 1em 0 0.2em 0;
+  font-size: 4.5em;
+  font-family: 'renault';
+  margin-top: 12px;
 }
 
-.main-h1 {
-    font-size: 1.5em;
-    font-family: 'renault';
-    text-align: center;
-    padding: 1em 0.5em 0.3em 0.5em;
+h1+h2 {
+  margin-top: 12px;
 }
 
-.main-h1:before {
-    content: url('../images/mixingbowl.png');
-    float: left;
+h2 {
+  font-size: 2.5em;
 }
 
-.main > div {
-    font-size: 1.5em;
-    padding-top: 4px;
+.rwd-h1 {
+  font-family: 'renault';
+  text-align: center;
+  padding: 1em 0.5em 0.3em 0.5em;
 }
+
+.rwd-h1:before {
+  content: url('../images/mixingbowl.png');
+  float: left;
+  margin-left: 60px;
+  margin-right: -200px;
+}
+
+#rwd-h1-image {
+  display: none;
+}
+
+.main>div {
+  font-size: 1.5em;
+  padding-top: 4px;
+}
+
 .main {
-    margin: auto;
-    left: 2%;
-    right: 2%;
-    width: 80%;
+  margin: auto;
+  left: 2%;
+  right: 2%;
+  width: 80%;
+}
+
+.jumbotron {
+  position: relative;
+  background-color: rgb(85, 179, 216);
+  background-image: url('../images/drinkingatwork.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'copenhagen-bold';
+  font-size: 3.5em;
+  color: white;
+  height: 50vh;
+  margin: 1em 0 1em 0;
+  border: solid black;
+  border-width: 0.1em 0 0.1em 0;
+  width: 100%;
+}
+
+.jumbotron:before {
+  background-color: rgba(114, 206, 209, 0.596);
+  position: absolute;
+  content: " ";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#topjumboheader {
+  margin-top: 0.5em;
+}
+
+#bottomjumboheader {
+  margin-bottom: 0.5em;
+  transform: rotate(-180deg);
+  direction: rtl;
+  unicode-bidi: bidi-override;
 }
 
 #tour {
-    font-size: 1em;
-    margin-top: 1em;
+  font-size: 2em;
+  margin-top: 0.5em;
 }
 
-@media screen and (max-width: 1510px) {
-    .main-h1:before {
-        content: "";
-    }
+.snippet {
+  text-align: left;
+  font-size: 0.5em;
+  color: white;
+  position:absolute;
+  bottom: 1em;
+  left: 1em;
+}
+.snippet > .indent {
+  margin-left: 1em;
+}
+
+@media screen and (max-width: 1740px) {
+  .rwd-h1:before {
+    content: url('../images/mixingbowl.png');
+    float: left;
+    margin-left: 6px;
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  span+h2 {
+    margin-top: 1em;
+  }
+
+  .rwd-h1:before {
+    content: "";
+  }
+  .rwd-h1:after {
+    content: url('../images/mixingbowl.png');
+  }
+  /* #rwd-h1-image {
+    
+  }*/
+}
+
+@media screen and (max-width: 800px){
+  .snippet {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 860px) {
-    .main {
-        width: 100%;
-    }
-    .main > div {
-        font-size: 1em;
-    }
+  /* #rwd-h1-image {
     
-    .main-h1 {
-        margin: 12px;
-        padding: 0;
-    }
+  }*/
+  .rwd-h1:after {
+    content: "";
+  }
+  .rwd-h1 {
+    margin: 12px;
+    padding: 0;
+  }
+  .main {
+    width: 90%;
+  }
+  .main>div {
+    font-size: 1em;
+  }
+  body {
+    height: 100%;
+  }
+  #rwd-h1-image {
+    content: url('../images/mixingbowl.png');
+    display: block;
+    width:30vw;
+    max-width: 100%;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 3em;
+  }
+  h2 {
+    font-size: 1.7em;
+  }
 }
