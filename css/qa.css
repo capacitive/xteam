@@ -12,7 +12,6 @@ body {
 }
 
 main {
-  block-size: 1em;
   margin: 1em;
   display: grid;
   grid-template-columns: 1fr 1fr;

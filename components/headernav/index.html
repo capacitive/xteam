@@ -1,20 +1,25 @@
 <template>
     <style>
-        :host {
+        header-nav {
             --nav-background-color: black;
+            --nav-link-color: white;
+            --nav-font-family: 'copenhagen-bold' 'Arial' sans-serif;
+            --nav-font-size: 180%;
+            --nav-padding: 1em;
         }
 
-        header {
+        header{
             background-color: var(--nav-background-color);
             width: 100%;
             margin: 0;
         }
 
         nav {
-            font-family: 'copenhagen-bold';
-            font-size: 180%;
+            font-family: var(--nav-font-family);
+            font-size: var(--nav-font-size);
+            font-weight: bold;
             padding: 1em;
-            color: white;
+            color: var(--nav-link-color);
         }
 
         ul {
@@ -55,19 +60,22 @@
         <nav>
             <ul>
                 <li>
-                    <a id="home" href="index.html">home</a>
+                    <a id="home" href="/index.html">home</a>
                 </li>
                 <li>
-                    <a id="examples" href="examples.html">examples</a>
+                    <a id="examples" href="/examples.html">examples</a>
                 </li>
                 <li>
-                    <a id="rwd" href="rwd.html">rwd</a>
+                    <a id="rwd" href="/rwd.html">rwd</a>
                 </li>
                 <li>
-                    <a id="csslayout" href="layout-tutorial/index.html">layout</a>
+                    <a id="csslayout" href="/layout-tutorial/index.html">layout</a>
                 </li>
                 <li>
-                    <a id="qa" href="qa.html">q&amp;a</a>
+                    <a id="stats" href="/stats.html">stats</a>
+                </li>
+                <li>
+                    <a id="qa" href="/qa.html">q&amp;a</a>
                 </li>
             </ul>
         </nav>
