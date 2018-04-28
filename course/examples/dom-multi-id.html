@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Scope for DOM elements - repl.it</title>
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="import" href="/components/headernav/index.html">
+  <link rel="stylesheet" href="dom-multi-id.css">
+
+  <script>
+    var counter = 0;
+    function showHelloWorld() {
+      var message = 'Heyo Woild!';
+      var hello = document.getElementById('hello');
+      if (counter > 5) {
+        hello.textContent = 'OK, enough already!';
+      } else {
+        hello.textContent = message;
+      }
+
+      counter += 1;
+    }
+  </script>
+</head>
+
+<body>
+  <header-nav></header-nav>
+  <h2>There is a
+    <em>DIV element</em> with
+    <em>id=hello</em> below this button. A JS function is wired up to the button that finds this element, and displays a message.
+    The question is: will the function's use of
+    <em>findElementById()</em> work if both the BUTTON and the DIV have the same id?'
+  </h2>
+  <!--uncomment the DIV here, and comment or delete the 
+                    one below to see if the function can then 'see' it using findElementById()-->
+  <!--<div id="hello"></div>-->
+  <div>
+    <input id="hello" type="button" onclick="showHelloWorld();" value="Press to show 'Hello world'">
+  </div>
+  <!--The div coming up next is below the input button with the 
+                  function call set to its onlick event.  
+                  Will this be visible to the function? 
+                  If not, try using a different method (selector) of getting a reference to this element.-->
+  <div id="hello"></div>
+  <h2>If not, try using a different DOM API method: <em>querySelectorAll()</em> to 
+    get a reference to the DIV element with this duplicate id.
+  </h2>
+</body>
+
+</html>
