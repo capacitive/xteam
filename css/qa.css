@@ -1,5 +1,6 @@
 header-nav {
     --nav-background-color: rgb(37, 81, 110);
+    --nav-position: fixed;
 }
 
 * {
@@ -11,11 +12,29 @@ body {
   text-align: left;
 }
 
+.a {
+  grid-area: answer;
+}
+
+.a2 {
+  grid-area: answer2;
+}
+
+.q {
+  grid-area: question;
+}
+
+.q2 {
+  grid-area: question2;
+}
+
 main {
-  margin: 1em;
+  margin: 6em 1em 2em 1em;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "question answer"
+                       "......... answer2"
+                       "question2 answer2";
   grid-gap: 2em;
 }
 

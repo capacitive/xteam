@@ -1,5 +1,12 @@
+//var regEx = /([A-z]+)/g;
+
+// $(document).ready(function(){
+
+// });
+
 document.addEventListener('DOMContentLoaded', function(event){
   console.log('DOM loaded and parsed');
+  console.dir(event);
 
   var counterDiv = document.createElement('div');
   var answerDiv = document.getElementById('answer1');
@@ -8,13 +15,18 @@ document.addEventListener('DOMContentLoaded', function(event){
   document.getElementById('answer1').addEventListener('input', changeEventHandler);
 }, false);
 
-function changeEventHandler(event) {
-  console.log('event fired: %o', event);
+function wordCount(text){
+  var array = text.split(' ');
+  console.dir(array);
+  return array.length;
+}
 
-  var regEx = /([A-z|1-9])+/g;
-  var arrayRegEx = regEx.exec(event.target.innerHTML);
-  console.log(arrayRegEx);
+function changeEventHandler(event) {
+  //console.log('event fired: %o', event);
+
+  var answerDiv = document.getElementById('answer1');
+  var words = wordCount(event.target.textContent);
 
   var counterDiv = event.target.childNodes[1];
-  counterDiv.innerHTML = arrayRegEx.length;
+  counterDiv.textContent = words;
 }

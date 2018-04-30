@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,6 +12,7 @@
   <link rel="import" href="/components/headernav/index.html">
   <link rel="stylesheet" href="css/qa.css">
 </head>
+
 <body>
   <header-nav></header-nav>
   <!-- <header>
@@ -33,7 +35,7 @@
     </header> -->
   <main>
     <div id="questions">
-      <div id="question1">
+      <div id="question1" class="q">
         <h1>Debugging</h1>
         <h2>How do you approach a tricky bug? Give an example from a recent project. Have any favorite tools or techniques for
           figuring things out when they go wrong?
@@ -43,7 +45,7 @@
         </aside>
       </div>
 
-      <div id="question2">
+      <div id="question2" class="q2">
         <h1>Testing</h1>
         <h2>Can you tell us about a project where you have written tests and whether they were successful or not in increasing
           the quality of the code? If possible, show an example from a recent project (pseudocode or link to a gist/commit/file)
@@ -52,7 +54,7 @@
         <aside>(max 300 words)</aside>
       </div>
 
-      <div id="question3">
+      <div id="question3" class="q2">
         <h1>Best Practices</h1>
         <h2>Describe something that is considered a "best practice" for a technology you're familiar with, and what factors go
           into your decision of whether to follow it or not. Then, walk us through a code sample from a recent project where
@@ -62,7 +64,7 @@
         <aside>(max 300 words)</aside>
       </div>
 
-      <div id="question4">
+      <div id="question4" class="q2">
         <h1>Lastly...</h1>
         <h2>Above all during this process, we want to respect your time. That's our #1 goal. We only want to ask you for the
           amount of time we need to determine if you're a good fit for X-Team. For that reason, we ask this upfront:</h2>
@@ -73,32 +75,33 @@
         </aside>
       </div>
     </div>
-    <div id="answers">
+    <div id="answers" class="a">
       <div>
         <div class="answer-header"></div>
         <p id="answer1" name="answer1" contenteditable="true">
-          I can actually use the X-Team code challenge itself as a recent example of my debugging techniques!  
-          As quickly as I can, I identify the distinct components of the application (however large or small) that work together
-          to provide the functionality that should be working, but is in a bad state (an exception is thrown).  In the case of the
-          X-Team code challenge, there's an intentionally written bug that I must identify and eradicate.  So I intentionally break
-          each part of the code that contributes to the functionality in question, so I can build it back up piece by piece.  Now, 
-          I'm invested in the process, and feel like I'm writing the code from scratch!  This makes the broken code much easier to 
-          find, because I'm going through the logic flow control step by step, and flipping the bits from broken state to working state.  
-          I'll know exactly where the last block of working code is!  Using this technique, I fixed the bug in 10 minutes.
+          I can actually use the X-Team code challenge itself as a recent example of my debugging techniques! As quickly as I can,
+          I identify the distinct components of the application (however large or small) that work together to provide the
+          functionality that should be working, but is in a bad state (an exception is thrown). In the case of the X-Team
+          code challenge, there's an intentionally written bug that I must identify and eradicate. So I intentionally break
+          each part of the code that contributes to the functionality in question, so I can build it back up piece by piece.
+          Now, I'm invested in the process, and feel like I'm writing the code from scratch! This makes the broken code much
+          easier to find, because I'm going through the logic flow control step by step, and flipping the bits from broken
+          state to working state. I'll know exactly where the last block of working code is! Using this technique, I fixed
+          the bug in 10 minutes. I've provided a video walkthrough of this method of rapid debugging.
         </p>
       </div>
       <div>
-        <p id="answer2" contenteditable="true">
+        <p id="answer2" class="a2" contenteditable="true">
 
         </p>
       </div>
       <div>
-        <p id="answer3" contenteditable="true">
+        <p id="answer3" class="a2" contenteditable="true">
 
         </p>
       </div>
       <div>
-        <p id="answer4" contenteditable="true">
+        <p id="answer4" class="a2" contenteditable="true">
 
         </p>
       </div>
