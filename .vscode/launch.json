@@ -3,7 +3,24 @@
   // Hover to view descriptions of existing attributes.
   // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
   "version": "0.2.0",
-  "configurations": [
+  "configurations": [ 
+    
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch Node App",
+      "program": "${workspaceFolder}/xteam/index.js",
+      "args": [
+        "bigbird88",
+        "60b725f10c9c85c70d97880dfe8191b3"
+      ]
+    },
+    {
+      "type": "node",
+      "request": "attach",
+      "name": "Attach Node Process",
+      "port": 9229
+    },
     {
       "name": "Launch Chromium localhost",
       "url": "http://localhost:3000",

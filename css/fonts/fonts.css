@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'copenhagen-bold';
+  src: url('fonts/Copenhagen-bold.otf');
+}
+
+@font-face {
+  font-family: 'copenhagen-light';
+  src: url('fonts/Copenhagen-light.otf');
+}
+
+@font-face {
+  font-family: 'renault';
+  src: url('fonts/RenaultLight.otf');
+}

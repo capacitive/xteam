@@ -11,103 +11,356 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="import" href="/components/headernav/index.html">
   <link rel="stylesheet" href="css/qa.css">
+  <link rel="stylesheet" href="css/prism.css">
 </head>
 
 <body>
   <header-nav></header-nav>
-  <!-- <header>
-        <nav>
-            <ul>
-                <li>
-                    <a href="index.html">home</a>
-                </li>
-                <li>
-                    <a href="examples.html">examples</a>
-                </li>
-                <li>
-                    <a href="rwd.html">rwd</a>
-                </li>
-                <li>
-                    <a href="qa.html" class="current">q&amp;a</a>
-                </li>
-            </ul>
-        </nav>
-    </header> -->
+  <label id="maxwords" data-max-words="300"></label>
   <main>
-    <div id="questions">
-      <div id="question1" class="q">
-        <h1>Debugging</h1>
-        <h2>How do you approach a tricky bug? Give an example from a recent project. Have any favorite tools or techniques for
-          figuring things out when they go wrong?
-        </h2>
-        <aside>
-          (max 300 words. Where helpful, include a few screenshots or a short video).
-        </aside>
-      </div>
+    <div id="question1" class="q">
+      <h1>Debugging</h1>
+      <h2>How do you approach a tricky bug? Give an example from a recent project. Have any favorite tools or techniques for
+        figuring things out when they go wrong?
+      </h2>
+      <aside>
+        (max 300 words. Where helpful, include a few screenshots or a short video).
+      </aside>
+    </div>
 
-      <div id="question2" class="q2">
-        <h1>Testing</h1>
-        <h2>Can you tell us about a project where you have written tests and whether they were successful or not in increasing
-          the quality of the code? If possible, show an example from a recent project (pseudocode or link to a gist/commit/file)
-          of how you rewrote some code to make it more testable.
-        </h2>
-        <aside>(max 300 words)</aside>
-      </div>
+    <div id="question2" class="q">
+      <h1>Testing</h1>
+      <h2>Can you tell us about a project where you have written tests and whether they were successful or not in increasing
+        the quality of the code? If possible, show an example from a recent project (pseudocode or link to a gist/commit/file)
+        of how you rewrote some code to make it more testable.
+      </h2>
+      <aside>(max 300 words)</aside>
+    </div>
 
-      <div id="question3" class="q2">
-        <h1>Best Practices</h1>
-        <h2>Describe something that is considered a "best practice" for a technology you're familiar with, and what factors go
-          into your decision of whether to follow it or not. Then, walk us through a code sample from a recent project where
-          you've had to make such a decision. Your code sample can be links to commits/gists/files, or just paste snippets
-          here and walk us through your decisions.
-        </h2>
-        <aside>(max 300 words)</aside>
-      </div>
+    <div id="question3" class="q">
+      <h1>Best Practices</h1>
+      <h2>Describe something that is considered a "best practice" for a technology you're familiar with, and what factors go
+        into your decision of whether to follow it or not. Then, walk us through a code sample from a recent project where
+        you've had to make such a decision. Your code sample can be links to commits/gists/files, or just paste snippets
+        here and walk us through your decisions.
+      </h2>
+      <aside>(max 300 words)</aside>
+    </div>
 
-      <div id="question4" class="q2">
-        <h1>Lastly...</h1>
-        <h2>Above all during this process, we want to respect your time. That's our #1 goal. We only want to ask you for the
-          amount of time we need to determine if you're a good fit for X-Team. For that reason, we ask this upfront:</h2>
+    <div id="question4" class="q">
+      <h1>Lastly...</h1>
+      <h2>Above all during this process, we want to respect your time. That's our #1 goal. We only want to ask you for the amount
+        of time we need to determine if you're a good fit for X-Team. For that reason, we ask this upfront:</h2>
 
-        <h2>What is your desired hourly rate in USD?</h2>
-        <aside>
-          Keep in mind we only offer contractor roles that are longer term (on average: 10 months) and full-time (40 hours per week)
-        </aside>
+      <h2>What is your desired hourly rate in USD?</h2>
+      <aside>
+        Keep in mind we only offer contractor roles that are longer term (on average: 10 months) and full-time (40 hours per week)
+      </aside>
+    </div>
+    <div class="a">
+      <div class="answer-header"></div>
+      <p id="answer1" contenteditable="true">
+        I can actually use the X-Team code challenge as a recent example of my debugging techniques. First, I confess I had a hard
+        time giving up Visual Studio's IntelliSense and debugging features when I went into the world of non-Microsoft stacks.
+        I then discovered Visual Studio Code, which put a light version of these back into my toolbox. What I do is identify
+        the distinct components of the application that work together to provide the functionality that should be working.
+        I start with fixing obvious bugs (typos, etc.), then I place breakpoints on each part of the code that contributes
+        to the main functionality in question, so I can walk through it piece by piece. I also use the watches, call stack,
+        global and local scope tools to get visuals on expected outputs. This makes the broken code much easier to find,
+        because I'm going through the logic flow control step by step, and visualising where the last block of working code
+        is. I remove each breakpoint once I've successfully stepped past it. If the code looks like
+        it should be working, I use Google Fu skills combined with a high comfort level with looking up documentation to research
+        the issue. Using these techniques, I fixed the bug in less than 10 minutes. I've provided a video walkthrough of
+        this method of debugging using the Visual Studio Code Debug tools. Analysing the call stack and using watches in
+        this debugger is where I get a ton of useful information to assist my problem solving efforts.</p>
+      <div></div>
+      <div class="videolink">
+        <a href="https://vimeo.com/268631444" target="_blank">Video demo</a>
       </div>
     </div>
-    <div id="answers" class="a">
-      <div>
-        <div class="answer-header"></div>
-        <p id="answer1" name="answer1" contenteditable="true">
-          I can actually use the X-Team code challenge itself as a recent example of my debugging techniques! As quickly as I can,
-          I identify the distinct components of the application (however large or small) that work together to provide the
-          functionality that should be working, but is in a bad state (an exception is thrown). In the case of the X-Team
-          code challenge, there's an intentionally written bug that I must identify and eradicate. So I intentionally break
-          each part of the code that contributes to the functionality in question, so I can build it back up piece by piece.
-          Now, I'm invested in the process, and feel like I'm writing the code from scratch! This makes the broken code much
-          easier to find, because I'm going through the logic flow control step by step, and flipping the bits from broken
-          state to working state. I'll know exactly where the last block of working code is! Using this technique, I fixed
-          the bug in 10 minutes. I've provided a video walkthrough of this method of rapid debugging.
-        </p>
+    <div class="a">
+      <div class="answer-header"></div>
+      <p id="answer2" contenteditable="true">
+        I truly wasn't prepared when I took on a long-term project creating a control system for 150+ 1-ton tow robots! I had
+        to learn a number of new techniques to support my efforts. This was an application that required real-time event
+        handling and intensive logic for governing traffic flow including intersection deadlocks. A prototype was created
+        in 3 months that ran in a production cell of 15 robots for 4 months, until a catastrophic natural event caused it
+        to fail; or rather it showed inconsistencies that wouldn't have revealed themselves otherwise. A simulation had been
+        used to determine how long the controller would run without issues, but this had obviously proved inaccurate, and
+        based on normative scenarios. We made extensive changes to a production-worthy version, with performance enhancements
+        for approximately 150 robots. This time, I utilised functional unit tests that ran robots through a traffic control scenario 
+        on a test track using a new API that sends control messages to the robots, in place of the previous direct TCP/IP packet method. 
+        These tests were instrumental in determining successful long-running algorithm and wireless connection handling of the
+        production system (the actual shop floor robots, no mocks). Did my queue design work? Were robots in the right location
+        at a given moment in time? How could we eliminate intersection accidents? Did one disconnect? We also had simulators
+        that could be run en masse in the test system, and accelerate years into the future. These tests gave us a look ahead
+        to rule out edge case scenarios and complex configurations. The system improved on a massive scale, and helped us
+        troubleshoot problems before they happened, proving that unit tests running in a live environment
+        are necessary for validating mission critical robotic systems.
+      </p>
+      <div></div>
+      <div class="videolink">
+        <a href="https://vimeo.com/268799894" target="_blank">Video demo</a>
       </div>
-      <div>
-        <p id="answer2" class="a2" contenteditable="true">
+    </div>
+    <div class="a">
+      <div class="answer-header"></div>
+      <p id="answer3" contenteditable="true">
+        I was going to say "wear your seat belt", but that's not a technology. Or is it? The equivalent to a seat belt in DevOps
+        Land is setting up a reverse proxy like nginx with security configurations that prevent DDoS attacks, use HTTP Strict
+        Transport to disallow SSL stripping, etc. As a developer on a recent project, I wanted to focus on writing code and
+        solving complex problems, but also wanted the apps behind the web servers to be secure. The client also needed a
+        packaged solution to enable their remote customers to have cloud services without the need for in-house web server
+        experts. Another best practice I proposed for this project was implementing Continuous Integration, knowing it would
+        speed up development (nice for a small team), and allow quick updates and bug fixes in the future. Additional reasoning
+        for this was it enabled initial deployment and upkeep for remote customer servers, so dependency installations were
+        included in the GitLab runner configuration (bash scripts to be run when code is pushed to the repo). Walking through the nginx config (first snippet): 1.
+        The TLS tunnels (ports 91, 92) are routing to local nodejs http servers - this allows servers not configured as web
+        servers to work as such, and allows the local servers to be stopped/started without shutting down the TLS tunnel.
+        2. The added advantage is the nginx reverse proxy security configurations, loaded at the end of the nginx configuration
+        file. This includes settings: server_tokens off (no clues),
+        <span class="italic">Add_header X-Frame-Options SAMEORIGIN</span> (no iframes), add_header X-Content-Type-Options nosniff, add_header
+        X-XSS-Protection (extra cross scripting protection), add_header Strict-Transport-Security ... (strict transport),
+        etc. Walking through the GitLab runner yaml (2nd snippet): basically - build nodejs, install dependencies if not,
+        fire up pm2, restart nginx, log every failure.
+      </p>
+      <div></div>
+      <div class="videolink"></div>
+      <div class="code">
+        <pre>
+          <code class="language-nginx">
+              worker_processes 2;
 
-        </p>
+              error_log /var/log/nginx/error.log warn;
+              pid       /var/run/nginx.pid;
+              
+              events {
+                  worker_connections  1024;
+              }
+              
+              http {
+                #staging - server (oneircloud_staging.ngrok.io)
+                server {
+                  listen 91;
+                  server_name oneir.http;
+                  location / {
+                    proxy_pass http://127.0.0.1:9091;
+                    proxy_http_version 1.1;
+                    proxy_set_header Upgrade $http_upgrade;
+                    proxy_set_header Connection 'upgrade';
+                    proxy_set_header Host $host;
+                  }
+                  # location /api/ {
+                  # 	proxy_pass http://localhost:9092;
+                  # 	proxy_http_version 1.1;
+                  # 	proxy_set_header Upgrade $http_upgrade;
+                  # 	proxy_set_header Connection 'upgrade';
+                  # 	proxy_set_header Host $host;
+                  # 	proxy_cache_bypass $http_upgrade;
+                  # }
+                }
+                #staging - apiserver (oneircloud_api_staging.ngrok.io)
+                server {
+                  listen 92;
+                  #return 302 https://$server_name$request_uri;
+                  location / {
+                    proxy_pass http://127.0.0.1:9092;
+                    proxy_http_version 1.1;
+                    proxy_set_header Upgrade $http_upgrade;
+                    proxy_set_header Connection 'upgrade';
+                    proxy_set_header Host $host;
+                    #proxy_cache_bypass $http_upgrade;
+                  }
+                }
+              
+                #dev - server (oneircloud_dev.eu.ngrok.io)
+                server {
+                  listen 81;
+                  server_name oneir.dev.http;
+                  location / {
+                    proxy_pass http://127.0.0.1:8081;
+                    proxy_http_version 1.1;
+                    proxy_set_header Upgrade $http_upgrade;
+                    proxy_set_header Connection 'upgrade';
+                    proxy_set_header Host $host;
+                  }
+                }
+                #dev - apiserver (oneircloud_dev.eu.ngrok.io)
+                server {
+                  listen 82;
+                  #return 302 https://$server_name$request_uri;
+                  location / {
+                    proxy_pass http://127.0.0.1:8082;
+                    proxy_http_version 1.1;
+                    proxy_set_header Upgrade $http_upgrade;
+                    proxy_set_header Connection 'upgrade';
+                    proxy_set_header Host $host;
+                    #proxy_cache_bypass $http_upgrade;
+                  }
+                }
+              
+              
+                #TLS/SSL config:
+                # server {
+                # 	listen 443 ssl http3 default_server;
+                # 	#listen [::]:443 ssl default_server;
+                # 	include snippets/self-signed.conf;
+                # 	include snippets/ssl-params.conf;
+                # }
+              
+                resolver 127.0.0.1 ipv6=off;
+                server_tokens off;
+                add_header X-Content-Type-Options nosniff;
+              
+                include       /etc/nginx/mime.types;
+                default_type  application/octet-stream;
+              
+                log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
+                          '$status $body_bytes_sent "$http_referer" '
+                          '"$http_user_agent" "$http_x_forwarded_for"';
+              
+                access_log  /var/log/nginx/access.log  main;
+              
+                sendfile        on;
+                #tcp_nopush     on;
+              
+                keepalive_timeout  65;
+                gzip  on;
+                include /etc/nginx/conf.d/*.conf;
+              }
+          </code>
+        </pre>
+        <br>
+        <pre>
+          <code class="language-yaml">
+              before_script:
+              - whoami
+              - echo $PATH
+              - export PATH=$PATH:/usr/local/bin
+            
+            stages:
+              - build
+              - check
+              - install
+              - reset
+              - run
+              - save
+              - nginx
+            
+            node-build:
+              stage: build
+              script:
+                - sudo wget http://linuxsoft.cern.ch/cern/scl/slc6-scl.repo -O /etc/yum.repos.d/devtools-3.repo
+                - sudo yum -y --nogpgcheck install devtoolset-3-gcc devtoolset-3-gcc-c++
+                - source /opt/rh/devtoolset-3/enable
+                - sudo scl enable devtoolset-3 bash
+                - sudo mkdir -p /usr/local/bin/http2
+                - sudo mkdir -p /home/gitlab-runner/node-build
+                - cd /home/gitlab-runner/node-build
+                - sudo wget https://nodejs.org/dist/v6.9.1/node-v6.9.1.tar.gz
+                - sudo tar -zxvf node-v6.9.1.tar.gz
+                - cd ./node-v6.9.1
+                - sudo ./configure
+                - sudo make && make install
+              only: ['1.1.9-ci']
+            
+            node-check:
+              stage: check
+              script:
+                - node -v
+                - npm -v
+              allow_failure: true
+              only: ['1.1.9-ci']
+            
+            install:
+              stage: install
+              cache:
+                paths:
+                  - node_modules/
+                  - bower_components/
+              script:
+                - node -v
+                - npm -v
+                - source /opt/rh/devtoolset-3/enable
+                - sudo scl enable devtoolset-3 bash
+                - sudo wget https://download.rethinkdb.com/centos/6/`uname -m`/rethinkdb.repo -O /etc/yum.repos.d/rethinkdb.repo
+                - sudo yum -y install rethinkdb
+                - npm install pm2 -g
+                - sudo rsync -havz ./ /usr/local/bin/http2
+                - cd /usr/local/bin/http2
+                - npm install
+                - npm install bower -g
+                - bower install --allow-root
+                - cd /usr/local/bin/http2/api
+                - npm install
+                - cd /usr/local/bin/http2
+                - sudo rsync -havz ./api/rethinkdb/instance1.conf /etc/rethinkdb/instances.d/instance1.conf
+                - sudo /etc/init.d/rethinkdb restart
+                - npm install -g recli
+                - sudo yum -y install wget make tcl
+                - sudo rpm -Uvh --replacepkgs http://download.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
+                - sudo rpm -Uvh --replacepkgs http://rpms.famillecollet.com/enterprise/remi-release-6.rpm
+                - sudo yum -y --enablerepo=remi,remi-test install redis
+                - service redis start
+                - sudo yum -y install epel-release
+                - sudo yum -y install nginx
+                - sudo rsync -havz ./api/nginx/nginx.conf /etc/nginx/nginx.conf
+                - sudo rsync -havz ./api/nginx/default.conf /etc/nginx/conf.d/default.conf
+              only: ['1.1.9-ci']
+            
+            reset-server:
+              stage: reset
+              script:
+                - node -v
+                - npm -v
+                - cd /usr/local/bin/http2
+                - pm2 delete server
+                - pm2 delete apiserver
+              allow_failure: true
+              only: ['1.1.9-ci']
+            
+            run:
+              stage: run
+              script:
+                - node -v
+                - npm -v
+                - cd /usr/local/bin/http2
+                - pm2 start server.js
+                - cd /usr/local/bin/http2/api
+                - pm2 start apiserver.js
+              allow_failure: true
+              only: ['1.1.9-ci']
+            
+            save:
+              stage: save
+              script:
+                - pm2 startup centos6
+                - pm2 save
+              allow_failure: true
+              only: ['1.1.9-ci']
+            
+            nginx:
+              stage: nginx
+              script:
+                - service nginx stop
+                - service nginx start
+              allow_failure: true
+              only: ['1.1.9-ci']
+          </code>
+        </pre>
       </div>
-      <div>
-        <p id="answer3" class="a2" contenteditable="true">
-
-        </p>
-      </div>
-      <div>
-        <p id="answer4" class="a2" contenteditable="true">
-
-        </p>
-      </div>
+    </div>
+    <div class="a">
+      <div class="answer-header"></div>
+      <p id="answer4" contenteditable="true">
+        My minimum rate is $55-65 per hour.
+      </p>
+      <div></div>
+      <div class="videolink"></div>
     </div>
   </main>
-  <script src="script/qa.js"></script>
+  <script src="/script/qa.js"></script>
+  <script src="/script/prism.js"></script>
 </body>
 
 </html>

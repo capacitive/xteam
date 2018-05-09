@@ -15,7 +15,8 @@
     var counter = 0;
     function showHelloWorld() {
       var message = 'Heyo Woild!';
-      var hello = document.getElementById('hello');
+      var hello = document.getElementById('hello'); //clue: 'div#hello'
+      console.dir(hello);
       if (counter > 5) {
         hello.textContent = 'OK, enough already!';
       } else {
@@ -46,7 +47,7 @@
                   Will this be visible to the function? 
                   If not, try using a different method (selector) of getting a reference to this element.-->
   <div id="hello"></div>
-  <h2>If not, try using a different DOM API method: <em>querySelectorAll()</em> to 
+  <h2>If not, try using a different DOM API method: <em>querySelector()</em> to 
     get a reference to the DIV element with this duplicate id.
   </h2>
 </body>
